@@ -44,7 +44,7 @@ async def on_ready():
 @client.event
 async def on_message(message):
   if message.author == client.user:
-    return;
+    return
   if message.content.startswith('.sf'):
     if message.content.startswith('.sf-navy'):
       msg = navy
@@ -69,7 +69,7 @@ async def on_message(message):
         continue
       elif key not in letter:
         await message.channel.send('You can only use letters you dumbass')
-        return;
+        return
       elif key == 'Ö':
         output += f'<:__:' + letter[key] + '>'
       else:
